@@ -127,3 +127,42 @@
     width: 56px;
     height: 56px;
 }
+
+.animateLine{
+    stroke-dasharray: 178;
+    stroke-dashoffset: 178;
+    animation: drawLine 1.25s ease-in-out forwards;
+    -webkit-animation: drawLine 1.25s ease-in-out forwards;
+}
+
+@keyframes drawLine {
+    to{
+        stroke-dashoffset: 0;
+    }
+}
+
+@-webkit-keyframes drawLine{
+    to{
+        stroke-dashoffset: 0;
+    }
+}
+.animateLine2{
+    stroke-dashoffset: 191;
+    stroke-dasharray: 191;
+    animation: drawLine2 1.25s ease-in-out forwards;
+    -webkit-animation: drawLine2 1.25s ease-in-out forwards;
+}
+
+@keyframes drawLine2 {
+    to{
+        stroke-dashoffset: 0;
+    }
+}
+
+@-webkit-keyframes drawLine2{
+    to{
+        stroke-dashoffset: 0;
+    }
+    
+}
+
