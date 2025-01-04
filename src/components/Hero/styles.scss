@@ -35,6 +35,9 @@
                 flex-direction: column;
                 gap: .5rem;
                 justify-content: center;
+                @include mb{
+                    align-items: center; //added center alignment for mobile
+                }
                 .intro{
                     @include tb{
                         font-size: 1.7rem;
