@@ -1,0 +1,40 @@
+@use '../../styles/abstract/colors' as*;
+@use '../../styles/abstract/breakpoints' as*;
+
+.footerMain{
+    display: flex;
+    padding: 2rem 6.5rem;
+    @include mb{
+        padding: 2.5rem 1rem;
+    }   
+    background-color: $black;
+    &_components{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        .leftSection{
+            display: flex;
+            align-items: center;
+            a{
+                all: unset;
+                color: $white;
+                font-size: 1.5rem;
+                cursor: pointer;
+                @include mb{
+                    font-size: 1rem;
+                }
+            }
+        }
+        .rightSection{
+            display: flex;
+            align-items: center;
+            p{  
+                color:$white;
+                font-size: 1.25rem;
+                @include mb{
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}

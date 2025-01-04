@@ -1,0 +1,104 @@
+@use '../../styles/abstract/colors' as*;
+@use '../../styles/abstract/breakpoints' as*;
+
+
+.testimonialsMain{
+    @include tb{
+        padding: 1.25rem;
+        margin: 5rem 0;
+    }
+    @include mb{
+        padding: 1rem;
+        margin: 2rem 0;
+    }
+    display: flex;
+    padding: 2rem 7rem;
+    &_components{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        .container1{
+            display: flex;
+            justify-content: center;
+            gap: .5rem;
+            .testi{
+                @include tb{
+                    font-size: 2.4rem;
+                }
+                @include mb{
+                    font-size: 2.4rem;
+                }
+                font-size: 3rem;
+                color: $black;
+                margin-bottom: 5rem;
+                strong{
+                    font-weight: 800;
+                }
+            }
+        }
+        
+        .container2{
+            display: grid;
+            @include tb{
+                grid-template-columns: repeat(2, minmax(200px, 1fr));
+                grid-template-rows: repeat(2, min-content);
+            }
+            @include mb{
+                grid-template-columns: repeat(1, minmax(300px, 1fr));
+                grid-template-rows: repeat(1, min-content);
+            }
+            grid-template-columns: repeat(3, minmax(200px, 1fr));
+            grid-template-rows: repeat(1, min-content);
+            gap: 2rem;
+            transition: all 400ms ease-in-out;
+            transform-origin: bottom left;
+            &:hover{
+                filter: drop-shadow(-10px 3px 2px $muave-gray);
+                transform: scale(105%);
+            }
+            .content{
+                display: flex;
+                @include tb{
+                    padding: 1rem;
+                }
+                @include mb{
+                    padding: 2.5rem 2rem;
+                }
+                background-color: $white;
+                flex-direction: column;
+                align-items: center;
+                padding: 2.5rem 4rem;
+                border-radius: .75rem;
+                .test{
+                    color: $black;
+                    font-size: .9rem;
+                    
+                }
+                
+                img{
+                    max-width: 7rem;
+                    margin-bottom: 1.25rem;
+                    border: 2px solid $dark-grayish-blue;
+                    border-radius: 100%;
+                }
+                .divider{
+                    width: 100%;
+                    height: 1px;
+                    background-color: $black;
+                    margin: 1rem 0;
+                }
+                .name{
+                    font-size: 1.5rem;
+                    font-weight: 550;
+                    margin-bottom: .5rem;
+                    color: $black;
+                }
+                .profession{
+                    color: $dark-grayish-blue;
+                }
+            }
+        }
+
+    }
+}

@@ -1,0 +1,15 @@
+@use '../../styles/abstract/colors' as*;
+@use '../../styles/abstract/breakpoints' as*;
+.mySvg{
+    filter: drop-shadow(5px 10px 10px $muave-gray);
+    width: 541px;
+    height: 514px;
+    @include tb{
+        width: 350px;
+        height: 350px;
+    }
+    @include mb{
+        width: 100%;
+        height: 100%;
+    }
+}

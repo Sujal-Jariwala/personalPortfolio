@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
+
+*,
+*::after,
+*::before{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Sora', sans-serif;
+}
+
+
+body{
+    min-height: 100vh;
+    main{
+        overflow-x: hidden;
+        width: 100%;
+        min-height: 100vh;
+        max-width: 100vw;
+        
+    }
+}

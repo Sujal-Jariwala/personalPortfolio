@@ -1,0 +1,96 @@
+@use '../../styles/abstract/colors' as*;
+@use '../../styles/abstract/breakpoints' as*;
+
+
+.aboutMain{
+    display: flex;
+    padding: 2rem 6rem;
+    background-color: $black;
+    color: white;
+    @include tb{
+        padding: 1rem;
+    }
+    @include mb{
+        padding: 1rem;
+    }
+    &_components{
+        display: flex;
+        gap: 7rem;
+        @include mb{
+            flex-direction: column;
+            width: 100%;
+        }
+        @include tb{
+            gap:.75rem;
+
+        }
+        .leftSection{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img{
+                // width: 100%;
+
+                @include mb{
+                    width: 100%;
+                }
+                @include tb{
+
+                }
+            }
+            
+        }
+        .rightSection{
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            @include tb{
+                gap: .75rem;
+            }
+            .me{
+                @include tb{
+                    font-size: 2rem;
+                }
+                @include mb{
+                    font-size: 2.5rem;
+                }
+                font-size: 3rem;
+                line-height: 3.5rem;
+                letter-spacing: -.32px;
+                position: relative;
+                svg{
+                    position: absolute;
+                    bottom: -30%;
+                    width: 291px;
+                    height: 94px;
+                    left: -3.5%;
+                    @include tb{
+                        width: 200px;
+                        height: 75px;
+                        bottom: -10%;
+                    }
+                    @include mb{
+                        width: 240px;
+                        height: 75px;
+                        bottom: -10%;
+                    }
+                }
+            }
+            p{
+                @include tb{
+                    font-size: .75rem;
+                    line-height: 17px;
+                }
+                @include mb{
+                    font-size: .75rem;
+                    line-break: strict;
+                    width: 100%;
+                }
+                font-size: .9rem;
+                line-height: 24px;
+
+            }
+        }
+
+    }
+}

@@ -1,0 +1,129 @@
+@use '../../styles/abstract/breakpoints' as*;
+@use '../../styles/abstract/colors' as*;
+
+
+.skillsMain{
+    display: flex;
+    @include dt{
+        padding: 3.75rem 6.5rem;
+        
+    }
+    @include tb{
+        margin: 7rem 0;
+        padding: 1rem;
+    }
+    @include mb{
+        margin: 5rem 0;
+        width: 100%;
+    }
+    margin-top: 2.75rem;
+    &_components{
+        @include mb{
+            width: 100%;
+            padding: 0 1.4rem;
+        }
+        width: 100%;
+        @include tb{
+            width: 100%;
+        }
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .container1{
+            display: flex;
+            
+            .md{
+                @include tb{
+                    font-size: 2rem;
+                }
+                @include mb{
+                    font-size: 2.5rem;
+                }
+                font-size: 3rem;
+                position: relative;
+                .line1{
+                    @include tb{
+                        width: 7.813rem;
+                    }
+                    @include mb{
+                        width: 7.813rem;
+                    }
+                    position: absolute;
+                    top: 100%;
+                    width: 11.125rem;
+                    height: .938rem;
+                    right: 13%;
+                }
+                .line2{
+                    @include tb{
+                        width: 10rem;
+                        right: -15%;
+                    }
+                    @include mb{
+                        width: 10rem;
+                        right: -15%;
+                    }
+                    width: 11.938rem;
+                    height: .813rem;
+                    position: absolute;
+                    top: 130%;
+                    right: -4.5%;
+                }
+            }
+            .underline{
+                position: absolute;
+                left: -20%;
+                top: -50%;
+            }
+        }
+        .container2{
+            display: grid;
+            grid-template-rows: repeat(2, min-content);
+            @include tb{
+                grid-template-columns: repeat(5, minmax(125px, 1fr));
+                gap:1rem;
+            }
+            @include mb{
+                grid-template-columns: repeat(2, minmax(150px, 1fr));
+                grid-template-rows: repeat(4, min-content);
+                gap: 1rem;
+            }
+            grid-template-columns: repeat(5, minmax(170px, 1fr));
+            gap:2rem 3rem;
+            margin-top: 2.5rem;
+            .tabs{
+                padding: 1.25rem 1rem;
+                background-color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                border-radius: .25rem;
+                border: 2px solid black;
+                transition: all 400ms ease-in-out;
+                &:hover{
+                    background-color: black;
+                    svg{
+                        fill: white;
+                    }
+                    p{
+                        color: white;
+                    }
+                }
+                svg{
+                    fill: black;
+                    
+                }
+                p{
+                    margin-top: 2rem;
+                    color: black;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+}
+.skills{
+    width: 56px;
+    height: 56px;
+}

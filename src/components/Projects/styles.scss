@@ -1,0 +1,151 @@
+@use '../../styles/abstract/colors' as*;
+@use '../../styles/abstract/breakpoints' as*;
+
+
+.projectMain{
+    display: flex;
+    padding: 2rem 7rem;
+    @include tb{
+        padding: 1.25rem;
+    }
+    @include mb{
+        padding: 1rem;
+    }
+    &_components{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        .p{
+            @include tb{
+                font-size: 2rem;
+                margin: 5rem 0;
+            }
+            @include mb{
+                justify-content: start;
+                font-size: 2.5rem;
+            }
+            display: flex;
+            justify-content: center;
+            gap: .5rem;
+            margin-bottom: 3.75rem;
+            font-size: 3rem;
+            font-weight: 450;
+            position: relative;
+            .stick{
+                @include tb{
+                    height: 3rem;
+                }
+                @include mb{
+                    width: .5rem;
+                }
+                position: absolute;
+                margin-left: 1.3rem;
+                width: .625rem;
+                height: 4.125rem;
+            }
+            .arrow{
+                @include tb{
+                    top: 60%;
+                    margin-left: .4rem;
+                    width: 2.5rem;
+                }
+                @include mb{
+                    width: 3rem;
+                    margin-left: .15rem;
+                }
+                position: absolute;
+                top: 70%;
+                width: 3.375rem;
+                height: 2.063rem;
+            }
+            strong{
+                font-weight: 900;
+            }
+        }
+        .project{
+            display: flex;
+            gap: 5rem;
+            @include mb{
+                margin-bottom: 5rem;
+                flex-direction: column-reverse;
+                justify-content: center;
+                align-items: center;
+                gap: 2rem;
+            }
+            @include tb{
+                gap: 3rem;
+            }
+            .leftSection{
+                display: flex;
+                img{
+                    @include tb{
+                        max-width: 20rem;
+                    }
+                    @include mb{
+                        width: 100%;
+                    }
+                    max-width: 35rem;
+                    border-radius: .75rem;
+                    filter: drop-shadow(-5px 5px 10px $dark-taupe);
+                   
+                }
+            }
+            
+            .rightSection{
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                gap: 1rem;
+                .index{
+                    @include tb{
+                        font-size: 2rem;
+                    }
+                    @include mb{
+                        font-size: 1.9rem;
+                    }
+                    text-decoration: underline;
+                    font-style: italic;
+                    font-weight: 800;
+                    font-size: 3rem;
+                }
+                .title{
+                    @include tb{
+                        font-size: 1.5rem;
+                    }
+                    @include mb{
+                        font-size: 1.5rem;
+                    }
+                    font-weight: 700;
+                    font-size: 2rem;
+                }
+                .desc{
+                    @include tb{
+                        font-size: .75rem;
+                    }
+                    @include mb{
+                        font-size: .9rem;
+                    }
+                    color: $dark-grayish-blue;
+                    font-size: 1.2rem;
+                }
+                a{
+                    all: unset;
+                    margin-top: 1rem;
+                    svg{
+                        color: $black;
+                        
+                        &:hover{
+                            color: $dark-taupe;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.project--index1{
+    display: flex;
+    flex-direction: row-reverse;
+}

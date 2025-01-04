@@ -1,0 +1,134 @@
+@use '../../styles/abstract/colors' as*;
+@use '../../styles/abstract/breakpoints' as*;
+
+
+.heroMain{
+
+    @include dt{
+        padding: 3.75rem 6.5rem;
+    }
+    @include mb{
+        width: fit-content;
+    }
+    
+    display: flex;
+    width: 100%;
+    margin-top: 10rem;
+    &_content{
+        display: flex;
+        gap: 3rem;
+        padding: 0 2rem;
+        @include mb{
+            flex-direction: column-reverse;
+        }
+        @include tb{
+            gap: 0rem;
+            margin-bottom: 5rem;
+        }
+        .leftSection{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            &_content{
+                display: flex;
+                flex-direction: column;
+                gap: .5rem;
+                justify-content: center;
+                .intro{
+                    @include tb{
+                        font-size: 1.7rem;
+                    }
+                    @include mb{
+                        font-size: 1.5rem;
+                    }
+                    font-size: 2.75rem;
+                }
+                strong{
+                    @include tb{
+                        font-size: 2rem;
+                    }
+                    @include mb{
+                        font-size: 1.5rem;
+                    }
+                    font-size: 2.75rem;
+                }
+                .abt{
+                    @include tb{
+                        font-size:clamp(.9rem, 2vw, 1rem) ;
+                    }
+                    @include mb{
+                        font-size: .75rem;
+                    }
+                    color: $dark-grayish-blue;
+                    margin-top: 1.25rem;
+                    font-size: 1.25rem;
+                }
+                .btnContainer{
+                    @include mb{
+                        bottom: -2rem;
+                        gap: 1rem;
+                    }
+                    display: flex;  
+                    position: relative;
+                    bottom: -5.5rem;
+                    gap: 1.5rem;
+                }
+                a{
+                    all: unset;
+                }
+                .btn{
+                    height: max-content;
+                    padding:.9rem ;
+                    border-radius: .25rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: transparent;
+                    border: 2px solid $black;
+                    outline: none;
+                    transition: all 400ms ease-out;
+                    &:hover{
+                        background-color: $black;
+                        cursor: pointer;
+                        svg{
+                            fill: white;
+                        }
+                    }
+                    
+                }
+            }
+        }
+        .rightSection{
+            display: flex;
+            @include mb{
+                width: 100%;
+            }
+            &_content{
+                display: flex;
+                justify-content: center;
+                @include mb{
+                    width: -webkit-fill-available;
+                }
+            }
+        }
+    }
+}
+
+hr{
+    background-color: black;
+    height: 4px;
+    margin-top: -.5rem;
+    width: 150%;
+    margin-left: -15rem;
+}
+.svg{
+    @include tb{
+        width: 14px;
+        height:14px;
+    }
+    @include dt{
+        width: 18px;
+        height: 18px;
+    }
+}

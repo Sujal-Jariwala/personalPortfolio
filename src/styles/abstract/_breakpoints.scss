@@ -1,0 +1,17 @@
+@mixin tb{
+    @media (min-width:48.75rem) and (max-width:74.938rem) {
+        @content;
+    }
+}
+
+@mixin dt{
+    @media (min-width:74.939rem) {
+        @content;
+    }
+}
+
+@mixin mb{
+    @media (max-width:48.688rem) {
+        @content;
+    }
+}

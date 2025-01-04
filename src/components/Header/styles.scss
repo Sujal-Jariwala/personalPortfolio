@@ -1,0 +1,152 @@
+@use '../../styles/abstract/colors' as *;
+@use '../../styles/abstract/breakpoints' as*;
+
+
+.headerMain{
+    display: flex;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    &_components{
+        display: flex;
+        width: 100%;
+        @include dt{
+            padding: 1.5rem 1rem;
+            
+            justify-content: space-around;
+        }
+        @include tb{
+            justify-content: space-between;
+            padding: 1rem 2.25rem;
+        }
+        @include mb{
+            padding: 1rem 2.25rem;
+        }
+        .container1{
+            display: flex;
+            align-items: center;
+
+            p{
+                font-weight: 600;
+                font-size: 18px;
+            }
+        }
+        .container2{
+            display: flex;
+            align-items: center;
+            nav{
+                display: flex;
+                gap: 2rem;
+                li{
+                    list-style: none;
+                    font-weight: 600;
+                    font-size: 18px;
+                    line-height: 24px;
+                    letter-spacing: -.32px;
+                    position: relative;
+                    @include dt{
+                        &::after{
+                            content: '';
+                            background-color: $black;
+                            height:2px;
+                            width: 0;
+                            left: 50%;
+                            position: absolute;
+                            top: 1.6rem;
+                            transition: width 300ms ease-in-out, left 300ms ease-in-out;
+                        }
+                        &:hover{
+                            cursor: pointer;
+                            &::after{
+                                width: 100%;
+                                left: 0;
+                            }
+                        }
+                    }
+                    
+                }
+            }
+        }
+        .container3{
+            display: flex;
+            button{
+                a{
+                    all: unset;
+                }
+                display: flex;
+                background-color: $black;
+                color: white;
+                border: 0;
+                align-items: center;
+                padding:.75rem 1.25rem;
+                border-radius: .25rem;
+                gap: .45rem;
+                transition: background-color 300ms ease-in-out;
+                span{
+                    font-weight: 500;
+                    font-size: 100% ;
+                }
+                &:hover{
+                    background-color: $dark-taupe;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+.itemsComponents{
+    display: flex;
+    width: 100%;
+    &_content{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+
+        .leftSection{
+            display: flex;
+            p{
+                font-weight: 600;
+                font-size: 1.25rem;
+            }
+        }
+        .rightSection{
+            display: flex;
+
+            .container{
+                display: flex;
+                flex-direction: column;
+                width: 25px;
+                height: 21px;
+                background-color: $white;
+                align-items: center;
+                justify-content: space-between;
+
+                &.active{
+                    .line__1{
+                        transform-origin: 0;
+                        transform: rotate(45deg);
+                    }
+                    .line__2{
+                        opacity: 0;
+                    }
+                    .line__3{
+                        transform-origin: 0;
+                        transform: rotate(-45deg);
+                    }
+                }
+            }
+            .lines{
+                height: 3px;
+                border-radius: 3px;
+                background-color: $black;
+                width: 100%;
+                transition: all 0.4s ease;
+            }
+            
+        }
+    }
+}
