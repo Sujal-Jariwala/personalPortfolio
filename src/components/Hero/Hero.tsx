@@ -31,7 +31,6 @@ export default function Hero(){
                         <MySvg/>    
 
                         </div>
-                        {/* <hr /> */}
                     </div>
                 </div>
             </section>
