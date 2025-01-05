@@ -149,20 +149,3 @@
     display: flex;
     flex-direction: row-reverse;
 }
-.stickAnimate{
-    stroke-dashoffset: 100;
-    stroke-dasharray: 100;
-    animation: stickAnimate 1s ease-in-out forwards;
-    -webkit-animation: stickAnimate 1s ease-in-out forwards;
-}
-
-@keyframes stickAnimate {
-    to{
-        stroke-dashoffset: 0;
-    }
-}
-@-webkit-keyframes stickAnimate{
-    to{
-        stroke-dashoffset: 0;
-    }
-}

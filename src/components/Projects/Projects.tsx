@@ -12,11 +12,13 @@ export default function Projects(){
                 const element = entry.target as HTMLElement
                 if (entry.isIntersecting) {
                     requestAnimationFrame(()=>{
-                        entry.target.classList.add(element.dataset.animation||'')
+                        element.style.transition= 'stroke-dashoffset 3.5s ease-in-out';
+                        element.style.strokeDashoffset = '0';
                     })
                 }else{
                     requestAnimationFrame(()=>{
-                        entry.target.classList.remove(element.dataset.animation||'')
+                        element.style.transition = 'none';
+                        element.style.strokeDashoffset = '1200'
                     })
                 }
             })
@@ -32,8 +34,10 @@ export default function Projects(){
                 <p className='p'>My <strong>Projects <svg className='stick' width="10" height="66" viewBox="0 0 10 66" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path style={{
                     strokeDasharray:'1200',
-                    strokeDashoffset:'1200'
-                }} ref={stickRef} data-animation={'stickAnimate'} d="M5.02308 5.9752C3.79173 -3.87554 4.01599 25.813 4.01599 35.7404C4.01599 43.8531 4.01599 51.9658 4.01599 60.0785C4.01599 65.238 4.77634 60.8517 6.03017 58.344" stroke="#FFC000" strokeWidth="7" strokeLinecap="round"/>
+                    strokeDashoffset:'1200',
+                    WebkitTransition:'stroke-dashoffset 3.5s ease-in-out',
+                    transition: 'stroke-dashoffset 3.5s ease-in-out'
+                }} ref={stickRef}  d="M5.02308 5.9752C3.79173 -3.87554 4.01599 25.813 4.01599 35.7404C4.01599 43.8531 4.01599 51.9658 4.01599 60.0785C4.01599 65.238 4.77634 60.8517 6.03017 58.344" stroke="#FFC000" strokeWidth="7" strokeLinecap="round"/>
                 </svg>
                 <svg className='arrow' width="54" height="33" viewBox="0 0 54 33" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M5.89479 10.0426C5.89479 9.08722 3.47531 7.08561 4.1044 7.80457C5.79419 9.73575 7.51524 11.9649 9.13986 14.0709C12.9422 18.9999 18.8187 20.9762 22.4559 25.6525C23.2802 26.7124 24.1942 27.6296 25.0295 28.6738C26.5047 30.5177 25.7429 28.8681 26.6521 27.5548C31.3952 20.7036 37.4998 12.8817 44.4441 8.25217C46.4361 6.92413 48.0185 4.72946 50.2069 4" stroke="#FFC000" strokeWidth="7" strokeLinecap="round"/>
