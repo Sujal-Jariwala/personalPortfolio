@@ -1,18 +1,23 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import './styles.scss'
+import { boolean } from 'zod';
 
 
 export default function Footer(){
     const dividerRef = useRef<HTMLDivElement|null>(null);
+    const wasInView = useRef(false);
+
 
     useEffect(()=>{
         const observer = new IntersectionObserver((entries)=>{
             entries.forEach(entry=>{
                 const element = entry.target as HTMLElement
-                if(entry.isIntersecting){
+                if(entry.isIntersecting && !wasInView.current){
                     entry.target.classList.add(element.dataset.animation||'')
+                    wasInView.current = true
                 }else{
                     entry.target.classList.remove(element.dataset.animation||'')
+                    wasInView.current = false
                 }
             })
         },{threshold:.1})
