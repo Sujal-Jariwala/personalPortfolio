@@ -21,7 +21,7 @@ const MySvg = ()=>{
           distance = Math.min(distance, maxDistance);
   
           eyeElements[index].style.transform = `translate(${Math.cos(angle) * distance}px, ${Math.sin(angle) * distance}px)`
-          
+          eyeElements[index].style.transition = `transform .15s`
       }
     })
    },[])
