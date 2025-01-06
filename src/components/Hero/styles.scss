@@ -39,22 +39,33 @@
                     align-items: center; //added center alignment for mobile
                 }
                 .intro{
+                    font-size: clamp(1.5rem, 2vw + .25rem, 1.75rem);
                     @include tb{
                         font-size: 1.7rem;
                     }
                     @include mb{
                         font-size: 1.5rem;
                     }
-                    font-size: 2.75rem;
+
+                    .str{
+                        font-size: clamp(1.75rem, 2vw + 1rem, 2.75rem);
+                        @include tb{
+                            font-size: 2rem;
+
+                        }
+                        @include mb{
+                            font-size: 1.5rem;
+                        }
+                    }
                 }
                 strong{
+                    font-size: clamp(1.75rem, 2vw + 1rem, 2.5rem);
                     @include tb{
                         font-size: 2rem;
                     }
                     @include mb{
                         font-size: 1.5rem;
                     }
-                    font-size: 2.75rem;
                 }
                 .abt{
                     @include tb{
