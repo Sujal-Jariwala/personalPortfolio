@@ -13,10 +13,10 @@ export default function Footer(){
             entries.forEach(entry=>{
                 const element = entry.target as HTMLElement
                 if(entry.isIntersecting && !wasInView.current){
-                    entry.target.classList.add(element.dataset.animation||'')
+                    entry.target.classList.add('animate')
                     wasInView.current = true
                 }else{
-                    entry.target.classList.remove(element.dataset.animation||'')
+                    entry.target.classList.remove('animate')
                     wasInView.current = false
                 }
             })
@@ -36,7 +36,7 @@ export default function Footer(){
                     <p>Developed By Sujal Jariwala</p>
                     <div 
                     ref={dividerRef}
-                    data-animation={'divider'}></div>
+                    className={'divider'}></div>
                 </div>
             </div>
         </footer>

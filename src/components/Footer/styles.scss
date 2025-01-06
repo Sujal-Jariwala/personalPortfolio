@@ -40,8 +40,11 @@
                 width: 100%;
                 background-color: white;
                 height: 2px;
-                animation: lineAnimate 1.25s ease-in-out forwards;
                 transform-origin: left;
+                &.animate{
+                    animation: lineAnimate 1.25s ease-in-out forwards;
+
+                }
             }
             @keyframes lineAnimate {
                 from{
