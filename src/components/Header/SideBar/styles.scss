@@ -34,9 +34,13 @@
             position: relative;
             margin-top: 2rem;
             justify-content: center;
-            button{
-                width: 95%;
+            a{
+                all: unset;
                 position: absolute;
+                width: 95%;
+                
+            button{
+                width: 100%;
                 padding: .95rem;
                 border-radius: .35rem;
                 background-color: black;
@@ -46,9 +50,7 @@
                 align-items: center;
                 justify-content: center;
                 gap: .3rem;
-                a{
-                    all: unset;
-                }
+            }
             }
         }
         

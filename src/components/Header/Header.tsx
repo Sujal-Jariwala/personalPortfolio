@@ -1,8 +1,6 @@
 import { useEffect, useState } from 'react'
 import './styles.scss'
 import { motion } from 'motion/react'
-import { GiHamburgerMenu } from "react-icons/gi";
-import { RxCross2 } from "react-icons/rx";
 import SideBar from './SideBar/SideBar';
 import resumePdf from '../../assets/sujal_jariwala_resume.pdf'
 
@@ -12,6 +10,7 @@ export default function Header(){
     const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth<=778);
     const [isOpen, setIsOpen] = useState(false);
 
+    const body = document.querySelector('body') as unknown as HTMLElement;
     const toggleSwitcher = () =>{
         setIsOpen((prev)=>!prev)
     }
@@ -25,6 +24,9 @@ export default function Header(){
         return()=> window.removeEventListener('resize', handleResize);
     },[isSmallScreen])
     
+    useEffect(()=>{
+        isOpen ? body.style.overflowY ='hidden' : body.style.overflowY ='scroll'
+    },[isOpen])
     
     return(
         <>
