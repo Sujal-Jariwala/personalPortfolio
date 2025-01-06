@@ -11,7 +11,6 @@ export default function Footer(){
     useEffect(()=>{
         const observer = new IntersectionObserver((entries)=>{
             entries.forEach(entry=>{
-                const element = entry.target as HTMLElement
                 if(entry.isIntersecting && !wasInView.current){
                     entry.target.classList.add('animate')
                     wasInView.current = true

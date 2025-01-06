@@ -2,29 +2,20 @@ import './styles.scss'
 import { motion } from 'motion/react'
 import React, { useEffect, useRef } from 'react'
 import { skills } from '../../data'
-import { line } from 'motion/react-client'
 
 export default function Skills(){
 
     const line1Ref = useRef<SVGPathElement|null>(null)
     const line2Ref = useRef<SVGPathElement|null>(null)
-    const wasInView = useRef(false)
     
     useEffect(()=>{
-        
-        
-        const observer = new IntersectionObserver((entries)=>{
-            // console.log(entries);
-            
+        const observer = new IntersectionObserver((entries)=>{            
             entries.forEach(entry=>{
-                if (entry.isIntersecting && !wasInView.current) {
+                if (entry.isIntersecting) {
                     entry.target.classList.add('animate')
-                    console.log(entries[1].target.className);
                     
-                    wasInView.current = true
                 }else{
                     entry.target.classList.remove('animate')
-                    wasInView.current = false
                 }                
             })
         },{threshold:.1});
