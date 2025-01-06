@@ -19,7 +19,7 @@ export default function Footer(){
         if(dividerRef.current) observer.observe(dividerRef.current)
 
         return ()=> observer.disconnect()
-    })
+    },[])
     return(
         <>
         <footer className='footerMain'>
