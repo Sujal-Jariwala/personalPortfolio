@@ -13,7 +13,7 @@ export default function Hero(){
                 <div className='heroMain_content'>
                     <div className='leftSection'>
                         <div className='leftSection_content'>
-                            <p className='intro'>Hello I'm <strong className='str'>Sujal Jariwala.</strong></p>
+                            <p className='intro'>Hello I'm <strong className='str'>Jariwala Sujal.</strong></p>
                             <strong>Frontend Developer </strong>
                             <p className='intro'>Based in <strong>Surat,India.</strong></p>
                             <p className='abt'>Hey👋! I'm Sujal Jariwala a passionate and detail-oriented Frontend developer that focuses on building beautiful user-friendly, dynamic web interfaces.</p>

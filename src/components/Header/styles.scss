@@ -72,28 +72,32 @@
         }
         .container3{
             display: flex;
-            button{
-                a{
-                    all: unset;
-                }
-                display: flex;
-                background-color: $black;
-                color: white;
-                border: 0;
-                align-items: center;
-                padding:.75rem 1.25rem;
-                border-radius: .25rem;
-                gap: .45rem;
-                transition: background-color 300ms ease-in-out;
-                span{
-                    font-weight: 500;
-                    font-size: 100% ;
-                }
-                &:hover{
-                    background-color: $dark-taupe;
-                    cursor: pointer;
+
+            a{
+                all: unset;
+
+                button{
+                
+                    display: flex;
+                    background-color: $black;
+                    color: white;
+                    border: 0;
+                    align-items: center;
+                    padding:.75rem 1.25rem;
+                    border-radius: .25rem;
+                    gap: .45rem;
+                    transition: background-color 300ms ease-in-out;
+                    span{
+                        font-weight: 500;
+                        font-size: 100% ;
+                    }
+                    &:hover{
+                        background-color: $dark-taupe;
+                        cursor: pointer;
+                    }
                 }
             }
+            
         }
     }
 }
