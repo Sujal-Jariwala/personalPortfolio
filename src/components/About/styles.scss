@@ -100,11 +100,11 @@
     stroke-dashoffset: 1000;
     stroke-dasharray: 1000;
     
-    &.animate{
+   
         animation: ovalAnimate 2s ease-in-out forwards;
         -webkit-animation: ovalAnimate 2s ease-in-out forwards;
         
-    }
+    
 }
 
 @keyframes ovalAnimate {

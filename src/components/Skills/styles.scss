@@ -131,12 +131,10 @@
 .animateLine{
     stroke-dasharray: 178;
     stroke-dashoffset: 178;
-    
-    &.animate{
-        animation: drawLine 1.25s ease-in-out forwards;
-        -webkit-animation: drawLine 1.25s ease-in-out forwards;
+    animation: drawLine 1.25s ease-in-out forwards;
+    -webkit-animation: drawLine 1.25s ease-in-out forwards;
 
-    }
+    
 }
 
 @keyframes drawLine {
@@ -150,15 +148,13 @@
         stroke-dashoffset: 0;
     }
 }
-.animateLine2{
+.animateLine1{
     stroke-dashoffset: 191;
     stroke-dasharray: 191;
-    
-    &.animate{
-        animation: drawLine1 1.25s ease-in-out forwards;
-        -webkit-animation: drawLine1 1.25s ease-in-out forwards;
+    animation: drawLine1 1.25s ease-in-out forwards;
+    -webkit-animation: drawLine1 1.25s ease-in-out forwards;
 
-    }
+    
 }
 
 @keyframes drawLine1 {
