@@ -86,8 +86,12 @@
                     }
                     max-width: 35rem;
                     border-radius: .75rem;
-                    filter: drop-shadow(-5px 5px 10px $dark-taupe);
-                   
+                    transform-origin: left bottom;
+                    transition: transform 500ms ease-in-out;
+                    &:hover{
+                        filter: drop-shadow(-10px 3px 5px $muave-gray);
+                        transform: scale(105%);
+                   }
                 }
             }
             
@@ -148,6 +152,7 @@
 .project--index1{
     display: flex;
     flex-direction: row-reverse;
+    
 }
 .stickAnimate{
     stroke-dashoffset: 100;

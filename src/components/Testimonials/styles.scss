@@ -51,12 +51,12 @@
             grid-template-columns: repeat(3, minmax(200px, 1fr));
             grid-template-rows: repeat(1, min-content);
             gap: 2rem;
-            transition: all 400ms ease-in-out;
-            transform-origin: bottom left;
-            &:hover{
-                filter: drop-shadow(-10px 3px 2px $muave-gray);
-                transform: scale(105%);
-            }
+            // transition: all 400ms ease-in-out;
+            // transform-origin: bottom left;
+            // &:hover{
+            //     // filter: drop-shadow(-10px 3px 2px $muave-gray);
+            //     // transform: scale(105%);
+            // }
             .content{
                 display: flex;
                 @include tb{
