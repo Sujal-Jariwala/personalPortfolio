@@ -48,7 +48,7 @@ const About = forwardRef<HTMLElement>((_,ref) => {
             I'm a passionate, detail-oriented Frontend developer, I work in building user-friendly, dynamic web interfaces. With hands on in modern frameworks like ReactJs and styling tools such as Tailwind CSS and SCSS, I create visually appealing and responsive websites that enhance user experiences. User experience, pixel perfect design, and writing clear, maintainable, readable code matters to me.
           </p>
           <p className='p p2'>
-            I began my journey as a web developer in August 2024, and since then, I've continued to learn and challange myself by taking on new challanges and learning the latest technologies along the way. I'm currently 19 years of age and I make beautiful UI from designs using modern technologies like ReactJs, TypeScript, Tailwindcss, Scss and much more.
+            I began my journey as a web developer in August 2024, and since then, I've continued to learn and challenge myself by taking on new challanges and learning the latest technologies along the way. I'm currently 19 years of age and I make beautiful UI from designs using modern technologies like ReactJs, TypeScript, Tailwindcss, Scss and much more.
           </p>
           <p className='p p3'>
             When I'm not building UI's, I'm usually reading research papers, watching youtube videos on How tech works under the Hood(talk about passion :D)
@@ -59,6 +59,5 @@ const About = forwardRef<HTMLElement>((_,ref) => {
   );
 });
 
-About.displayName = 'About'; // Adding display name for dev tools
 
 export default About;

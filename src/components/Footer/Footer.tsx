@@ -3,9 +3,16 @@ import './styles.scss'
 
 
 export default function Footer(){
+
     const dividerRef = useRef<HTMLDivElement|null>(null);
     const wasInView = useRef(false);
 
+    const handleScroll = ()=>{
+        window.scrollTo({
+            top:0,
+            behavior:'smooth',
+        })
+    }
 
     useEffect(()=>{
         const observer = new IntersectionObserver((entries)=>{
@@ -23,12 +30,13 @@ export default function Footer(){
 
         return ()=> observer.disconnect()
     },[])
+    
     return(
         <>
         <footer className='footerMain'>
             <div className='footerMain_components'>
                 <div className='leftSection'>
-                    <a href="/">Portfolio</a>
+                    <p onClick={handleScroll}>Portfolio</p>
                 </div>
                 <div className='rightSection'>
                     <p>Developed By Sujal Jariwala</p>

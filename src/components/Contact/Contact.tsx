@@ -26,6 +26,14 @@ const Contact = forwardRef<HTMLElement>((_,ref)=>{
             [name] : value
         }))
     };
+    const handleContact = ()=>{
+        const myEmail = `jariwalasujal1415@gmail.com`;
+        const subject = `Saw your portfolio`;
+        const body = `Hey there my name is ${formData.name} and I'm reaching out to you for: ${formData.message}, this is my email: ${formData.email}`
+
+        window.location.href = `mailto:${myEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
+
+    }
     
     
     return(
@@ -69,7 +77,7 @@ const Contact = forwardRef<HTMLElement>((_,ref)=>{
                             onChange={handleChange}
                             ></textarea>
                             <div className='btnContainer'>
-                                <button className='giT'>Get In Touch</button>
+                                <button onClick={handleContact} className='giT'>Get In Touch</button>
                                 {socials.map((social, index)=>(
                                     <a key={index} href={index === 4? `mailto:${social.mailto}`:`${social.href}`} target='_blank' className='btn'>
                                     {React.cloneElement(social.svg, {className:'svgs'})}

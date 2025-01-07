@@ -10,10 +10,11 @@ import Footer from './components/Footer/Footer'
 
 
 function App() {
-  const aboutRef = useRef<HTMLElement|null>(null);
+  const aboutRef = useRef(null);
   const skillsRef = useRef(null);
   const projectRef = useRef(null);
   const contactRef = useRef(null)
+  const headerRef = useRef(null)
 
   const refs = {
     aboutRef,
@@ -26,7 +27,7 @@ function App() {
   return (
     <>
     <main>
-        <Header refs={refs}/>
+        <Header ref={headerRef} refs={refs}/>
         <Hero/>
         <Skills ref={skillsRef}/>
         <About ref={aboutRef}/>
