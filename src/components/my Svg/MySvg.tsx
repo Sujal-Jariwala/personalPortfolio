@@ -10,7 +10,7 @@ const MySvg = ()=>{
     for (let index = 0; index < eyeElements.length; index++) {
       startingPositions.push(eyeElements[index].getBoundingClientRect())
     }
-    const maxDistance = 8;
+    const maxDistance = 12;
     document.addEventListener('mousemove', (e)=>{
       for (let index = 0; index < eyeElements.length; index++) {
           const distanceX = e.clientX - startingPositions[index].x;

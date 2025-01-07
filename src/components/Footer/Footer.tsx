@@ -1,6 +1,5 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef} from 'react'
 import './styles.scss'
-import { boolean } from 'zod';
 
 
 export default function Footer(){

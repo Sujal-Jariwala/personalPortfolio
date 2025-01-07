@@ -1,10 +1,10 @@
 import './styles.scss'
 import { socials } from '../../data'
-import React, { useState } from 'react'
+import React, { forwardRef, useState } from 'react'
 
 
 
-export default function Contact(){
+const Contact = forwardRef<HTMLElement>((_,ref)=>{
 
     const [formData, setFormData] = useState({
         name:'',
@@ -18,7 +18,7 @@ export default function Contact(){
         e.preventDefault()
         
     }
-
+    
     const handleChange = (e:React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>)=>{
         const {name, value} = e.target;
         setFormData(prev=>({
@@ -27,10 +27,10 @@ export default function Contact(){
         }))
     };
     
-
+    
     return(
         <>
-        <section className="contactMain">
+        <section className="contactMain" ref={ref}>
             <div className="contactMain_components">
                 <div className='leftSection'>
                     <div className='leftSection_content'>
@@ -52,7 +52,7 @@ export default function Contact(){
                             onChange={handleChange}
                             
                             />
-
+    
                             <input 
                             type="text" 
                             placeholder='Your Website (if exists)'
@@ -60,7 +60,7 @@ export default function Contact(){
                             onChange={handleChange}
                             name='websiteUrl'
                             />
-
+    
                             <textarea 
                             name="message" 
                             id="message" 
@@ -91,4 +91,6 @@ export default function Contact(){
         </section>
         </>
     )
-}
+})
+
+export default Contact

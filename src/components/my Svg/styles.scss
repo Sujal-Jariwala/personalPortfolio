@@ -1,7 +1,7 @@
 @use '../../styles/abstract/colors' as*;
 @use '../../styles/abstract/breakpoints' as*;
 .mySvg{
-    filter: drop-shadow(5px 10px 10px $muave-gray);
+    filter: drop-shadow(-10px 15px 15px $dark-taupe);
     width: 541px;
     height: 514px;
     @include tb{

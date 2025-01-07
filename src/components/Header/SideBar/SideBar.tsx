@@ -1,18 +1,30 @@
 import './styles.scss'
 import { motion } from 'motion/react'
 import resumePdf from '../../../assets/sujal_jariwala_resume.pdf'
+import React from 'react'
 
-export default function SideBar(){
+interface SideBarProps{
+    refs:{
+        aboutRef: React.RefObject<HTMLElement>,
+        skillsRef : React.RefObject<HTMLElement>,
+        projectRef :  React.RefObject<HTMLElement>,
+        contactRef : React.RefObject<HTMLElement>,
+    },
+    onNavigate : (ref:React.RefObject<HTMLElement>)=>void 
+}
+export default function SideBar({refs, onNavigate}:SideBarProps){
+
+    
     return(
         <>
             <section className='sideBarSection'>
                 <motion.div initial={{opacity:0, x:-155}} animate={{opacity:1, x:0}} transition={{duration:.5}} exit={{opacity:1, x:55}} className='sideBarSection_components'>
                     <div className='container1'>
                         <nav>
-                            <li>About Me</li>
-                            <li>Skills</li>
-                            <li>Project</li>
-                            <li>Contact Us</li>
+                            <li onClick={()=>onNavigate(refs.aboutRef)}>About Me</li>
+                            <li onClick={()=>onNavigate(refs.skillsRef)}>Skills</li>
+                            <li onClick={()=>onNavigate(refs.projectRef)}>Project</li>
+                            <li onClick={()=>onNavigate(refs.contactRef)}>Contact</li>
                         </nav>
                     </div>
                     <div className='btnContainer'>

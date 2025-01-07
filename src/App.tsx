@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useRef } from 'react'
 import Header from './components/Header/Header'
 import Hero from './components/Hero/Hero'
 import Skills from './components/Skills/Skills'
@@ -10,21 +10,31 @@ import Footer from './components/Footer/Footer'
 
 
 function App() {
-  const [count, setCount] = useState(0)
+  const aboutRef = useRef<HTMLElement|null>(null);
+  const skillsRef = useRef(null);
+  const projectRef = useRef(null);
+  const contactRef = useRef(null)
 
+  const refs = {
+    aboutRef,
+    skillsRef,
+    projectRef,
+    contactRef
+  };
+
+ 
   return (
     <>
     <main>
-    <Header/>
-    <Hero/>
-    <Skills/>
-    <About/>
-    <Projects/>
-    <Testimonials/>
-    <Contact/>
-    <Footer/>
+        <Header refs={refs}/>
+        <Hero/>
+        <Skills ref={skillsRef}/>
+        <About ref={aboutRef}/>
+        <Projects ref={projectRef}/>
+        <Testimonials/>
+        <Contact ref={contactRef}/>
+        <Footer/>
     </main>
-    
     </>
   )
 }

@@ -1,5 +1,4 @@
 import './styles.scss'
-import { motion } from 'motion/react'
 import { socials } from '../../data'
 import React from 'react'
 import MySvg from '../my Svg/MySvg'

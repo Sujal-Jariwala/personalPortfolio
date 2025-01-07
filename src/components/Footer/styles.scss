@@ -37,8 +37,9 @@
                 }
             }
             .divider{
+                margin-top: .25rem;
                 width: 100%;
-                background-color: white;
+                background-color: $white;
                 height: 2px;
                 transform-origin: left;
                 &.animate{

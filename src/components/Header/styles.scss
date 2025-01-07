@@ -51,12 +51,12 @@
                         &::after{
                             content: '';
                             background-color: $black;
-                            height:2px;
+                            height:3px;
                             width: 0;
                             left: 50%;
                             position: absolute;
                             top: 1.6rem;
-                            transition: width 300ms ease-in-out, left 300ms ease-in-out;
+                            transition: width 350ms ease-in-out, left 350ms ease-in-out;
                         }
                         &:hover{
                             cursor: pointer;
