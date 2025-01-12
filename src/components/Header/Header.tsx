@@ -1,7 +1,7 @@
 import React, { forwardRef, useEffect, useState } from 'react'
 import './styles.scss'
 import SideBar from './SideBar/SideBar';
-import resumePdf from '../../assets/sujal_jariwala_resume.pdf'
+import resumePdf from '../../assets/Resume.pdf'
 
 interface HeaderProps{
     refs:{

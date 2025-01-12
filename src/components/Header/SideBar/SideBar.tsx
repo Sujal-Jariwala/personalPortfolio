@@ -1,6 +1,6 @@
 import './styles.scss'
 import { motion } from 'motion/react'
-import resumePdf from '../../../assets/sujal_jariwala_resume.pdf'
+import resumePdf from '../../../assets/Resume.pdf'
 import React from 'react'
 
 interface SideBarProps{
