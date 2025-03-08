@@ -13,10 +13,10 @@ import { BsTwitterX } from "react-icons/bs";
 import { IoLogoDiscord } from "react-icons/io5";
 import { HiOutlineMail } from "react-icons/hi";
 import { FaLinkedin } from "react-icons/fa";
-import multiPageFormImg from './assets/multiPageForm.jpg'
 import onePageEcomImg from './assets/SPAE.jpg'
 import productsWithCart from './assets/productsWithCart.jpg'
 import testi1 from './assets/testi1.png'
+import spaceTourismImg from './assets/preview.jpg'
 
 
 export type Skills = {
@@ -123,10 +123,10 @@ export const socials : Socials[] = [
 export const projects : Projects[] = [
     {
         index:'01',
-        title: 'Multi Page Form',
-        desc:'This responsive multi-page form utilizes TypeScript for type safety and maintainability, SCSS for flexible and maintainable styling, and Yup for comprehensive form validation, ensuring data integrity and a smooth user experience.',
-        liveSiteUrl : 'https://sujal-jariwala.github.io/Multi-Page-Form/',
-        img:multiPageFormImg
+        title: 'Space Tourism Website',
+        desc:'This responsive Space-tourism website utilizes TypeScript for type safety and maintainability, SCSS for flexible and maintainable styling',
+        liveSiteUrl : 'https://sujal-jariwala.github.io/spaceTourism/',
+        img:spaceTourismImg
     },
     {
         index:'02',
